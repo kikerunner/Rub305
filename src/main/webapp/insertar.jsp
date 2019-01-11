@@ -9,8 +9,10 @@
 <body>
 	Actor creado con exito
 	<br>
-	<b><%= request.getParameter("name") %></b>
-	<b><%= request.getParameter("yearofbirthdate") %></b><br>
+	<b><%= request.getParameter("name") %></b> <br>
+	<b><%= request.getParameter("anonacimiento") %></b><br>
+	<b><%= request.getParameter("curso") %></b><br>
+	<b><%= request.getParameter("EdadCalculada") %></b><br>
 	<a href="/ListarActores.jsp"> Ir a la lista</a><br>
 	<a href="/index.jsp"> Volver a Index</a><br>
 	

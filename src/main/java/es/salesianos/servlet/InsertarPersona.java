@@ -24,11 +24,12 @@ public class InsertarPersona extends HttpServlet{
 		Persona persona = new Persona();
 		persona.setNombre(req.getParameter("name"));
 		String dateInString = req.getParameter("anonacimiento");
-		java.util.Date date = new java.util.Date();
-		java.util.Date parse = SimpleDateFormat.parse(dateInString);
-		date = new java.sql.Date(date.getTime());
-		persona.setAnonacimiento(date);
-
+		try {
+			java.util.Date date =new SimpleDateFormat("yyyy-MM-dd").parse(dateInString);
+			persona.setAnonacimiento(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		persona.setCurso(Integer.parseInt(req.getParameter("curso")));
 		repository.insert(persona);
 		redirect(req, resp, "/insertar.jsp");
