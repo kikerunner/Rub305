@@ -19,7 +19,8 @@
 
 	<form action="/insertar" method="post">
 		<span>Name:</span> <input type="text" name="name"> <br />
-		<span>Año nacimiento:</span> <input type="date" name="anonacimiento"> <br />
+		<span>Año nacimiento:</span> <input type="date" name="anonacimiento">
+		<span style="visibility: hidden;">Edad:</span> <input type="text" name="EdadCalculada" style="visibility: hidden;"> <br />
 		<span>Curso:</span> <select id="curso" name="curso">
 			<option value="1">Primero</option>
 			<option value="2">Segundo</option>			
