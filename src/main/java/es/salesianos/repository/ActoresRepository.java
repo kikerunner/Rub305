@@ -32,7 +32,6 @@ public class ActoresRepository {
 			preparedStatement.setString(1, persona.getNombre());
 			java.sql.Date date2 = new java.sql.Date(date.getTime());
 			preparedStatement.setDate(2, date2);
-			
 			preparedStatement.setInt(3, persona.getCurso());
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
